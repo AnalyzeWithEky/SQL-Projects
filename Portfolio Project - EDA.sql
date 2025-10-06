@@ -1,6 +1,6 @@
 -- EDA
 
--- Here we are jsut going to explore the data and find trends or patterns or anything interesting like outliers
+-- Here we are just going to explore the data and find trends or patterns or anything interesting like outliers
 
 -- normally when you start the EDA process you have some idea of what you're looking for
 
@@ -38,20 +38,6 @@ ORDER BY funds_raised_millions DESC;
 -- BritishVolt looks like an EV company, Quibi! I recognize that company - wow raised like 2 billion dollars and went under - ouch
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -- SOMEWHAT TOUGHER AND MOSTLY USING GROUP BY--------------------------------------------------------------------------------------------------
 
 -- Companies with the biggest single Layoff
@@ -68,8 +54,6 @@ FROM world_layoffs.layoffs_staging2
 GROUP BY company
 ORDER BY 2 DESC
 LIMIT 10;
-
-
 
 -- by location
 SELECT location, SUM(total_laid_off)
@@ -104,9 +88,6 @@ ORDER BY 2 DESC;
 
 
 
-
-
-
 -- TOUGHER QUERIES------------------------------------------------------------------------------------------------------------------------------------
 
 -- Earlier we looked at Companies with the most Layoffs. Now let's look at that per year. It's a little more difficult.
@@ -127,8 +108,6 @@ FROM Company_Year_Rank
 WHERE ranking <= 3
 AND years IS NOT NULL
 ORDER BY years ASC, total_laid_off DESC;
-
-
 
 
 -- Rolling Total of Layoffs Per Month
